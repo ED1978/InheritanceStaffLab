@@ -4,9 +4,9 @@ public class Employee {
 
     private String name;
     private String nINumber;
-    private Integer salary;
+    private Double salary;
 
-    public Employee(String name, String nINumber, Integer salary){
+    public Employee(String name, String nINumber, Double salary){
         this.name = name;
         this.nINumber = nINumber;
         this.salary = salary;
@@ -20,8 +20,18 @@ public class Employee {
         return this.nINumber;
     }
 
-    public int getSalary(){
+    public Double getSalary(){
         return this.salary;
     }
+
+    public void raiseSalary(Double raise){
+        this.salary += raise;
+    }
+
+    public Double payBonus(){
+        Double bonus = getSalary() / 100;
+        return bonus;
+    }
+
 
 }
