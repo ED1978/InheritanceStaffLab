@@ -35,5 +35,11 @@ public class Employee {
         return bonus;
     }
 
+    public void changeName(String name){
+        if (name != null){
+            this.name = name;
+        }
+    }
+
 
 }

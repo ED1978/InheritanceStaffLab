@@ -29,6 +29,18 @@ public class DataBaseAdminTest {
     }
 
     @Test
+    public void canChangeNameNotNull() {
+        dataBaseAdmin.changeName("Fred");
+        assertEquals("Fred", dataBaseAdmin.getName());
+    }
+
+    @Test
+    public void canChangeNameNull() {
+        dataBaseAdmin.changeName(null);
+        assertEquals("Simon", dataBaseAdmin.getName());
+    }
+
+    @Test
     public void canRaiseSalary() {
         dataBaseAdmin.raiseSalary(1.99);
         assertEquals(301.99, dataBaseAdmin.getSalary(), 0.01);

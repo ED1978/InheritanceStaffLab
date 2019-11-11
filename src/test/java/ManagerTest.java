@@ -34,6 +34,18 @@ public class ManagerTest {
     }
 
     @Test
+    public void canChangeNameNotNull() {
+        manager.changeName("Scott");
+        assertEquals("Scott", manager.getName());
+    }
+
+    @Test
+    public void canChangeNameNull() {
+        manager.changeName(null);
+        assertEquals("Dave", manager.getName());
+    }
+
+    @Test
     public void canRaiseSalary() {
         manager.raiseSalary(1.99);
         assertEquals(201.99, manager.getSalary(), 0.01);
