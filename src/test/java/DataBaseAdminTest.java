@@ -35,6 +35,12 @@ public class DataBaseAdminTest {
     }
 
     @Test
+    public void canNotRaiseSalaryNegativeNumber() {
+        dataBaseAdmin.raiseSalary(-1.00);
+        assertEquals(300.00, dataBaseAdmin.getSalary(), 0.01);
+    }
+
+    @Test
     public void canPayBonus() {
         assertEquals(3.00, dataBaseAdmin.payBonus(), 0.01);
     }
