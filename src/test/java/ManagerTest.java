@@ -1,4 +1,4 @@
-import Staff.Manager;
+import staff.Manager;
 import org.junit.Before;
 import org.junit.Test;
 
